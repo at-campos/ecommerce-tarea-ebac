@@ -124,7 +124,7 @@ main {
         box-sizing: border-box;
         height: 100%;
         position: fixed;
-        right: 0%;
+        right: -100%;
         top: 100px;
         box-shadow: $boxShadow;
 
@@ -166,6 +166,10 @@ main {
             }
             
         }
+    }
+
+    .show{
+        right: 0;
     }
 }
 
