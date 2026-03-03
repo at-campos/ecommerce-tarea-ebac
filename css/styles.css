@@ -38,6 +38,16 @@ body .header {
 body .header__logo {
   width: 100px;
 }
+body .header__cart-badge {
+  display: block;
+  width: 15px;
+  height: 15px;
+  background-color: red;
+  border-radius: 50%;
+  position: absolute;
+  top: 35px;
+  right: 40px;
+}
 
 main .banner {
   background-image: url("../img/banner_2.jpg");

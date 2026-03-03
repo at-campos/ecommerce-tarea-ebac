@@ -59,6 +59,19 @@ body {
         &__logo {
             width: 100px;
         }
+
+        &__cart{
+            &-badge{
+                display: block;
+                width: 15px;
+                height: 15px;
+                background-color: red;
+                border-radius: 50%;
+                position: absolute;
+                top: 35px;
+                right: 40px;
+            }
+        }
     }
 }
 

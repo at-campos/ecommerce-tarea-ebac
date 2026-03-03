@@ -5,9 +5,11 @@ const cartIco = header.lastElementChild;
 const cart = document.querySelector(".cart");
 const cartProducts = cart.querySelector(".cart__products");
 let removeIco = document.getElementsByClassName("remove");
-console.log(removeIco);
-const addButton = document.querySelectorAll(".products__button")
-console.log(addButton);
+const addButton = document.querySelectorAll(".products__button");
+
+const cartBadge = document.createElement("span");
+cartBadge.setAttribute("class", "header__cart-badge");
+
 
 cartIco.addEventListener("click", () => {
     cart.classList.toggle("show");
@@ -56,6 +58,14 @@ addButton.forEach(el => {  // TODO: Volver esto una función
 })
 
 cartProducts.addEventListener("click", deletionHandler);
+console.log(cartProducts.childElementCount);
+
+if(cartProducts.childElementCount > 0){
+    console.log("last", cartIco.lastChild);
+    console.log(cartIco);
+    cartIco.append(cartBadge);
+    cartBadge.textContent = cartProducts.childElementCount;
+}
 
 function deletionHandler(e){
     if(e.type === "click"){
