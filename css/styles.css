@@ -86,6 +86,10 @@ main .products__price {
   font-weight: 300;
   font-size: 15px;
 }
+main .products__button {
+  width: 60%;
+  margin-bottom: 10px;
+}
 main .cart {
   width: 500px;
   background-color: #fff;

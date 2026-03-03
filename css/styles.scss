@@ -112,6 +112,8 @@ main {
 
         &__button{
             @extend %buttonStyleDefault;
+            width: 60%;
+            margin-bottom: 10px;
         }
     }
 
