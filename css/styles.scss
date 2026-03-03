@@ -30,6 +30,15 @@ $boxShadow: -19px -1px 22px -15px rgba(0, 0, 0, 0.30);
     box-sizing: border-box;
 }
 
+%buttonStyleDefault{
+    @include textProperties(200, 15px);
+    background-color: $darkGray;
+    color: $white;
+    font-family: $fontFamily;
+    border: 0;
+    padding: 15px;
+    cursor: pointer;
+}
 body {
     font-family: $fontFamily;
     @include textProperties(300, 15px);
@@ -100,6 +109,10 @@ main {
         &__price {
             @include textProperties(300, 15px);
         }
+
+        &__button{
+            @extend %buttonStyleDefault;
+        }
     }
 
     .cart {
@@ -109,7 +122,7 @@ main {
         box-sizing: border-box;
         height: 100%;
         position: fixed;
-        right: -100%;
+        right: 0%;
         top: 100px;
         box-shadow: $boxShadow;
 
@@ -138,6 +151,18 @@ main {
         &__delete-ico {
             width: 20px;
             cursor: pointer;
+        }
+
+        &__buy{
+            display: flex;
+            justify-content: center;
+            &-button{
+                @extend %buttonStyleDefault;
+                width: 100%;
+                margin-top: 10px;
+                margin-bottom: 10px;
+            }
+            
         }
     }
 }
