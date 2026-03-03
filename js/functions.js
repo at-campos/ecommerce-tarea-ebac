@@ -4,8 +4,8 @@ const header = document.querySelector("header");
 const cartIco = header.lastElementChild;
 const cart = document.querySelector(".cart");
 const cartProducts = cart.querySelector(".cart__products");
-const removeIco = document.querySelectorAll(".remove");
-
+let removeIco = document.getElementsByClassName("remove");
+console.log(removeIco);
 const addButton = document.querySelectorAll(".products__button")
 console.log(addButton);
 
@@ -13,7 +13,7 @@ cartIco.addEventListener("click", () => {
     cart.classList.toggle("show");
 })
 
-addButton.forEach(el => {
+addButton.forEach(el => {  // TODO: Volver esto una función
     el.addEventListener("click", () => {
         // Consigue el item padre
         const thisItem = el.parentElement;
@@ -43,7 +43,7 @@ addButton.forEach(el => {
         newCartPrice.textContent = productPrice.innerHTML;
         newCartProduct.append(newCartPrice);
 
-        var newTrashIco = document.createElement("i");
+        var newTrashIco = document.createElement("i");              // Icono borrar
         newTrashIco.setAttribute("class", "remove");
         const trashIco = document.createElement("img");
         trashIco.setAttribute("src", "img/trash.svg");
@@ -52,13 +52,14 @@ addButton.forEach(el => {
         newCartProduct.append(newTrashIco);
 
         cartProducts.appendChild(newCartProduct);
-        
     })
 })
 
-removeIco.forEach(el => {
-    el.addEventListener("click", () => {
-        const product = el.parentElement;
+cartProducts.addEventListener("click", deletionHandler);
+
+function deletionHandler(e){
+    if(e.type === "click"){
+        const product = e.target.parentElement.parentElement; // hey, funciona
         product.remove();
-    })
-})
+    }
+}
