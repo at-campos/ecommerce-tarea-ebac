@@ -7,9 +7,11 @@ const cartProducts = cart.querySelector(".cart__products");
 let removeIco = document.getElementsByClassName("remove");
 const addButton = document.querySelectorAll(".products__button");
 
-const cartBadge = document.createElement("span");
+let cartBadge = document.createElement("span");
 cartBadge.setAttribute("class", "header__cart-badge");
-
+cartIco.append(cartBadge);
+cartBadge.textContent = cartProducts.childElementCount;
+cartBadge.setAttribute("style", "font-family: Arial");
 
 cartIco.addEventListener("click", () => {
     cart.classList.toggle("show");
@@ -54,22 +56,16 @@ addButton.forEach(el => {  // TODO: Volver esto una función
         newCartProduct.append(newTrashIco);
 
         cartProducts.appendChild(newCartProduct);
+        cartBadge.textContent++;
     })
 })
 
 cartProducts.addEventListener("click", deletionHandler);
-console.log(cartProducts.childElementCount);
-
-if(cartProducts.childElementCount > 0){
-    console.log("last", cartIco.lastChild);
-    console.log(cartIco);
-    cartIco.append(cartBadge);
-    cartBadge.textContent = cartProducts.childElementCount;
-}
 
 function deletionHandler(e){
     if(e.type === "click"){
         const product = e.target.parentElement.parentElement; // hey, funciona
         product.remove();
+        cartBadge.textContent -= 1;
     }
 }

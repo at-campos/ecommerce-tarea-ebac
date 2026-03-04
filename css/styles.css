@@ -47,6 +47,8 @@ body .header__cart-badge {
   position: absolute;
   top: 35px;
   right: 40px;
+  color: #fff;
+  font-family: "Lexend", Arial, Helvetica, sans-serif;
 }
 
 main .banner {
