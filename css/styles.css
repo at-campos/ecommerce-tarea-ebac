@@ -11,6 +11,17 @@ main .cart__item, body .header {
   box-sizing: border-box;
 }
 
+main .cart__buy-button, main .products__button {
+  font-weight: 200;
+  font-size: 15px;
+  background-color: #333;
+  color: #fff;
+  font-family: "Lexend", Arial, Helvetica, sans-serif;
+  border: 0;
+  padding: 15px;
+  cursor: pointer;
+}
+
 body {
   font-family: "Lexend", Arial, Helvetica, sans-serif;
   font-weight: 300;
@@ -26,6 +37,18 @@ body .header {
 }
 body .header__logo {
   width: 100px;
+}
+body .header__cart-badge {
+  display: block;
+  width: 15px;
+  height: 15px;
+  background-color: red;
+  border-radius: 50%;
+  position: absolute;
+  top: 35px;
+  right: 40px;
+  color: #fff;
+  font-family: "Lexend", Arial, Helvetica, sans-serif;
 }
 
 main .banner {
@@ -75,6 +98,10 @@ main .products__price {
   font-weight: 300;
   font-size: 15px;
 }
+main .products__button {
+  width: 60%;
+  margin-bottom: 10px;
+}
 main .cart {
   width: 500px;
   background-color: #fff;
@@ -107,6 +134,18 @@ main .cart__img {
 main .cart__delete-ico {
   width: 20px;
   cursor: pointer;
+}
+main .cart__buy {
+  display: flex;
+  justify-content: center;
+}
+main .cart__buy-button {
+  width: 100%;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+main .show {
+  right: 0;
 }
 
 @media (max-width: 820px) {

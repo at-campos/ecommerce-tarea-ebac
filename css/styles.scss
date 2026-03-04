@@ -30,6 +30,15 @@ $boxShadow: -19px -1px 22px -15px rgba(0, 0, 0, 0.30);
     box-sizing: border-box;
 }
 
+%buttonStyleDefault{
+    @include textProperties(200, 15px);
+    background-color: $darkGray;
+    color: $white;
+    font-family: $fontFamily;
+    border: 0;
+    padding: 15px;
+    cursor: pointer;
+}
 body {
     font-family: $fontFamily;
     @include textProperties(300, 15px);
@@ -49,6 +58,21 @@ body {
 
         &__logo {
             width: 100px;
+        }
+
+        &__cart{
+            &-badge{
+                display: block;
+                width: 15px;
+                height: 15px;
+                background-color: red;
+                border-radius: 50%;
+                position: absolute;
+                top: 35px;
+                right: 40px;
+                color: $white;
+                font-family: $fontFamily;
+            }
         }
     }
 }
@@ -100,6 +124,12 @@ main {
         &__price {
             @include textProperties(300, 15px);
         }
+
+        &__button{
+            @extend %buttonStyleDefault;
+            width: 60%;
+            margin-bottom: 10px;
+        }
     }
 
     .cart {
@@ -139,6 +169,22 @@ main {
             width: 20px;
             cursor: pointer;
         }
+
+        &__buy{
+            display: flex;
+            justify-content: center;
+            &-button{
+                @extend %buttonStyleDefault;
+                width: 100%;
+                margin-top: 10px;
+                margin-bottom: 10px;
+            }
+            
+        }
+    }
+
+    .show{
+        right: 0;
     }
 }
 
