@@ -102,6 +102,29 @@ main .products__button {
   width: 60%;
   margin-bottom: 10px;
 }
+main .sideMenu {
+  width: 500px;
+  background-color: #fff;
+  padding: 25px;
+  box-sizing: border-box;
+  height: 100%;
+  position: fixed;
+  left: -100%;
+  top: 100px;
+  box-shadow: 19px 1px 22px -15px rgba(0, 0, 0, 0.3);
+}
+main .sideMenu__title {
+  border-bottom: 1px solid #333;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+main .sideMenu__options {
+  cursor: pointer;
+}
+main .sideMenu__closeIco {
+  cursor: pointer;
+}
 main .cart {
   width: 500px;
   background-color: #fff;
@@ -146,6 +169,9 @@ main .cart__buy-button {
 }
 main .show {
   right: 0;
+}
+main .menuShow {
+  left: 0;
 }
 
 @media (max-width: 820px) {

@@ -3,6 +3,9 @@ console.log("Hola mundo!");
 const header = document.querySelector("header");
 const cartIco = header.lastElementChild;
 const cart = document.querySelector(".cart");
+const menuIco = header.firstElementChild;
+const menu = document.querySelector(".sideMenu");
+const menuCloseIco = document.querySelector(".sideMenu__closeIco");
 const cartProducts = cart.querySelector(".cart__products");
 let removeIco = document.getElementsByClassName("remove");
 const addButton = document.querySelectorAll(".products__button");
@@ -15,6 +18,14 @@ cartBadge.setAttribute("style", "font-family: Arial");
 
 cartIco.addEventListener("click", () => {
     cart.classList.toggle("show");
+})
+
+menuIco.addEventListener("click", () => {
+    menu.classList.toggle("menuShow");
+})
+
+menuCloseIco.addEventListener("click", () => {
+    menu.classList.toggle("menuShow");
 })
 
 addButton.forEach(el => {  // TODO: Volver esto una función
