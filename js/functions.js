@@ -14,7 +14,6 @@ let cartBadge = document.createElement("span");
 cartBadge.setAttribute("class", "header__cart-badge");
 cartIco.append(cartBadge);
 cartBadge.textContent = cartProducts.childElementCount;
-cartBadge.setAttribute("style", "font-family: Arial");
 
 cartIco.addEventListener("click", () => {
     cart.classList.toggle("show");

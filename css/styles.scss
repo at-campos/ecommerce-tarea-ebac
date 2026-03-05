@@ -64,7 +64,7 @@ body {
         &__cart{
             &-badge{
                 display: block;
-                width: 15px;
+                width: 17px;
                 height: 15px;
                 background-color: red;
                 border-radius: 50%;
@@ -72,7 +72,9 @@ body {
                 top: 35px;
                 right: 40px;
                 color: $white;
-                font-family: $fontFamily;
+                text-align: center;
+                font-family: Arial, Helvetica, sans-serif;
+                padding-bottom: 0.1em;
             }
         }
     }
@@ -196,6 +198,7 @@ main {
 
         &__item-price {
             font-weight: 500;
+            margin-right: 2em;
         }
 
         &__item-name{
@@ -230,10 +233,6 @@ main {
 
     .menuShow{
         left: 0;
-    }
-
-    .remove{
-        margin-left: 2em;
     }
 }
 

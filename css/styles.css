@@ -40,7 +40,7 @@ body .header__logo {
 }
 body .header__cart-badge {
   display: block;
-  width: 15px;
+  width: 17px;
   height: 15px;
   background-color: red;
   border-radius: 50%;
@@ -48,7 +48,9 @@ body .header__cart-badge {
   top: 35px;
   right: 40px;
   color: #fff;
-  font-family: "Lexend", Arial, Helvetica, sans-serif;
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+  padding-bottom: 0.1em;
 }
 
 main .banner {
@@ -160,6 +162,7 @@ main .cart__item {
 }
 main .cart__item-price {
   font-weight: 500;
+  margin-right: 2em;
 }
 main .cart__item-name {
   margin-right: auto;
@@ -186,9 +189,6 @@ main .show {
 }
 main .menuShow {
   left: 0;
-}
-main .remove {
-  margin-left: 2em;
 }
 
 @media (max-width: 820px) {
