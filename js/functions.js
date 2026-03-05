@@ -9,12 +9,12 @@ const menuCloseIco = document.querySelector(".sideMenu__closeIco");
 const cartProducts = cart.querySelector(".cart__products");
 let removeIco = document.getElementsByClassName("remove");
 const addButton = document.querySelectorAll(".products__button");
+const allButtons = document.querySelectorAll("button");
 
 let cartBadge = document.createElement("span");
 cartBadge.setAttribute("class", "header__cart-badge");
 cartIco.append(cartBadge);
 cartBadge.textContent = cartProducts.childElementCount;
-cartBadge.setAttribute("style", "font-family: Arial");
 
 cartIco.addEventListener("click", () => {
     cart.classList.toggle("show");
@@ -49,7 +49,6 @@ addButton.forEach(el => {  // TODO: Volver esto una función
 
         var newCartName = document.createElement("p");            //TITULO
         newCartName.setAttribute("class", "cart__item-name");
-        console.log(newCartName);
         newCartName.textContent = productName.innerHTML;
         newCartProduct.append(newCartName);
 
@@ -74,9 +73,18 @@ addButton.forEach(el => {  // TODO: Volver esto una función
 cartProducts.addEventListener("click", deletionHandler);
 
 function deletionHandler(e){
-    if(e.type === "click"){
+    if(e.type === "click" && e.target.classList.contains("cart__delete-ico")){
         const product = e.target.parentElement.parentElement; // hey, funciona
         product.remove();
         cartBadge.textContent -= 1;
     }
 }
+
+allButtons.forEach(el => {
+    el.addEventListener("mouseenter", () => {
+        el.style.backgroundColor = "#9f9f9f";
+    })
+    el.addEventListener("mouseleave", () => {
+        el.style.backgroundColor = "#181818";
+    })
+});
