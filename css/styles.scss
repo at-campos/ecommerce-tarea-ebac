@@ -143,6 +143,13 @@ main {
         left: -100%;
         top: 100px;
         box-shadow: $boxShadowLeft;
+        &__title{
+            border-bottom: 1px solid $darkGray;
+        }
+
+        &__options{
+            cursor:pointer;
+        }
     }
 
     .cart {

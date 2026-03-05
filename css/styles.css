@@ -113,6 +113,12 @@ main .sideMenu {
   top: 100px;
   box-shadow: 19px 1px 22px -15px rgba(0, 0, 0, 0.3);
 }
+main .sideMenu__title {
+  border-bottom: 1px solid #333;
+}
+main .sideMenu__options {
+  cursor: pointer;
+}
 main .cart {
   width: 500px;
   background-color: #fff;
