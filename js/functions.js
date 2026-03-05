@@ -9,6 +9,7 @@ const menuCloseIco = document.querySelector(".sideMenu__closeIco");
 const cartProducts = cart.querySelector(".cart__products");
 let removeIco = document.getElementsByClassName("remove");
 const addButton = document.querySelectorAll(".products__button");
+const allButtons = document.querySelectorAll("button");
 
 let cartBadge = document.createElement("span");
 cartBadge.setAttribute("class", "header__cart-badge");
@@ -78,3 +79,12 @@ function deletionHandler(e){
         cartBadge.textContent -= 1;
     }
 }
+
+allButtons.forEach(el => {
+    el.addEventListener("mouseenter", () => {
+        el.style.backgroundColor = "#9f9f9f";
+    })
+    el.addEventListener("mouseleave", () => {
+        el.style.backgroundColor = "#181818";
+    })
+});
