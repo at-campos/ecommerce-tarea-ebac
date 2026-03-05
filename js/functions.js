@@ -48,7 +48,6 @@ addButton.forEach(el => {  // TODO: Volver esto una función
 
         var newCartName = document.createElement("p");            //TITULO
         newCartName.setAttribute("class", "cart__item-name");
-        console.log(newCartName);
         newCartName.textContent = productName.innerHTML;
         newCartProduct.append(newCartName);
 
@@ -73,7 +72,7 @@ addButton.forEach(el => {  // TODO: Volver esto una función
 cartProducts.addEventListener("click", deletionHandler);
 
 function deletionHandler(e){
-    if(e.type === "click"){
+    if(e.type === "click" && e.target.classList.contains("cart__delete-ico")){
         const product = e.target.parentElement.parentElement; // hey, funciona
         product.remove();
         cartBadge.textContent -= 1;
