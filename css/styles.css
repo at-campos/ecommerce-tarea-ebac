@@ -118,7 +118,7 @@ main .sideMenu {
   box-sizing: border-box;
   height: 100%;
   position: fixed;
-  left: -100%;
+  left: -150%;
   top: 100px;
   box-shadow: 19px 1px 22px -15px rgba(0, 0, 0, 0.3);
 }
@@ -141,7 +141,7 @@ main .cart {
   box-sizing: border-box;
   height: 100%;
   position: fixed;
-  right: -100%;
+  right: -150%;
   top: 100px;
   box-shadow: -19px -1px 22px -15px rgba(0, 0, 0, 0.3);
 }

@@ -149,7 +149,7 @@ main {
         box-sizing: border-box;
         height: 100%;
         position: fixed;
-        left: -100%;
+        left: -150%;
         top: 100px;
         box-shadow: $boxShadowLeft;
         &__title{
@@ -175,7 +175,7 @@ main {
         box-sizing: border-box;
         height: 100%;
         position: fixed;
-        right: -100%;
+        right: -150%;
         top: 100px;
         box-shadow: $boxShadow;
 
