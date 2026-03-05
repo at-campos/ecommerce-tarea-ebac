@@ -190,6 +190,7 @@ main {
         &__item {
             border-bottom: 1px solid $darkGray;
             @extend %flexCombo;
+            justify-content: flex-start;
             padding: 15px;
         }
 
@@ -197,8 +198,13 @@ main {
             font-weight: 500;
         }
 
+        &__item-name{
+            margin-right: auto;
+        }
+
         &__img {
             width: 60px;
+            padding-right: 2em;
         }
 
         &__delete-ico {
@@ -224,6 +230,10 @@ main {
 
     .menuShow{
         left: 0;
+    }
+
+    .remove{
+        margin-left: 2em;
     }
 }
 
