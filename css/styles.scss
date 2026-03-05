@@ -145,9 +145,16 @@ main {
         box-shadow: $boxShadowLeft;
         &__title{
             border-bottom: 1px solid $darkGray;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
         }
 
         &__options{
+            cursor:pointer;
+        }
+
+        &__closeIco{
             cursor:pointer;
         }
     }

@@ -5,6 +5,7 @@ const cartIco = header.lastElementChild;
 const cart = document.querySelector(".cart");
 const menuIco = header.firstElementChild;
 const menu = document.querySelector(".sideMenu");
+const menuCloseIco = document.querySelector(".sideMenu__closeIco");
 const cartProducts = cart.querySelector(".cart__products");
 let removeIco = document.getElementsByClassName("remove");
 const addButton = document.querySelectorAll(".products__button");
@@ -22,6 +23,11 @@ cartIco.addEventListener("click", () => {
 menuIco.addEventListener("click", () => {
     menu.classList.toggle("menuShow");
 })
+
+menuCloseIco.addEventListener("click", () => {
+    menu.classList.toggle("menuShow");
+})
+
 addButton.forEach(el => {  // TODO: Volver esto una función
     el.addEventListener("click", () => {
         // Consigue el item padre

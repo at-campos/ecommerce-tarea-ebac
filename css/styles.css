@@ -115,8 +115,14 @@ main .sideMenu {
 }
 main .sideMenu__title {
   border-bottom: 1px solid #333;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 main .sideMenu__options {
+  cursor: pointer;
+}
+main .sideMenu__closeIco {
   cursor: pointer;
 }
 main .cart {
