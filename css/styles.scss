@@ -110,6 +110,10 @@ main {
         &__item {
             cursor: pointer;
             text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            height: 30em;
         }
 
         &__img {
@@ -120,16 +124,21 @@ main {
         &__title {
             @include textProperties(500, 17px);
             margin-bottom: 5px;
+            height: 3em;
+            margin-top: 1em;
         }
 
         &__price {
             @include textProperties(300, 15px);
+            margin-top: auto;
+            margin-bottom: 2em;
         }
 
         &__button{
             @extend %buttonStyleDefault;
             width: 60%;
-            margin-bottom: 10px;
+            margin-bottom: 2em;
+            margin-top: auto;
         }
     }
 
