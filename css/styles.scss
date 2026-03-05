@@ -6,6 +6,7 @@ $gray: #9f9f9f;
 $white: #fff;
 $bannerBack: url("../img/banner_2.jpg");
 $boxShadow: -19px -1px 22px -15px rgba(0, 0, 0, 0.30);
+$boxShadowLeft: 19px 1px 22px -15px rgba(0, 0, 0, 0.3);
 
 @mixin textProperties($weight, $size) {
     font-weight: $weight;
@@ -132,6 +133,18 @@ main {
         }
     }
 
+    .sideMenu{
+        width: 500px;
+        background-color: $white;
+        padding: 25px;
+        box-sizing: border-box;
+        height: 100%;
+        position: fixed;
+        left: -100%;
+        top: 100px;
+        box-shadow: $boxShadowLeft;
+    }
+
     .cart {
         width: 500px;
         background-color: $white;
@@ -182,9 +195,12 @@ main {
             
         }
     }
-
     .show{
         right: 0;
+    }
+
+    .menuShow{
+        left: 0;
     }
 }
 
